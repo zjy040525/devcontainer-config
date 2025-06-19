@@ -9,7 +9,7 @@
   },
   "mounts": [
     {
-      "source": "node_shared_volume",
+      "source": "nodejs_shared_volume",
       "target": "/usr/local/share/nvm/versions/node",
       "type": "volume"
     }
