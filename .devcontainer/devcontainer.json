@@ -1,0 +1,17 @@
+{
+  "name": "Node.js & TypeScript",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "onCreateCommand": "sudo chown -R node ${NODE_HOME}",
+  "postCreateCommand": "bash -i -c 'nvm i'",
+  "remoteEnv": {
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "NODE_HOME": "/usr/local/share/nvm/versions/node"
+  },
+  "mounts": [
+    {
+      "source": "node_shared_volume",
+      "target": "/usr/local/share/nvm/versions/node",
+      "type": "volume"
+    }
+  ]
+}
